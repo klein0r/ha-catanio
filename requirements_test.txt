@@ -4,7 +4,7 @@ pytest-cov==7.1.0
 
 # Runtime requirements of the integration
 aiocoap==0.4.17
-protobuf==7.36.0
+protobuf==7.36.2
 
 # Linting and typing
 mypy==2.4.0
