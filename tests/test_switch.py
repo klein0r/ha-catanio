@@ -9,7 +9,12 @@ from pytest_homeassistant_custom_component.common import (
 )
 from syrupy.assertion import SnapshotAssertion
 
-from custom_components.catanio.api import CatanIOConnectionError, Channel, Interface
+from custom_components.catanio.api import (
+    CatanIOConnectionError,
+    Channel,
+    ChannelConfigUpdate,
+    Interface,
+)
 from homeassistant.components.switch import DOMAIN as SWITCH_DOMAIN
 from homeassistant.const import (
     ATTR_ENTITY_ID,
@@ -95,3 +100,42 @@ async def test_command_failed(hass: HomeAssistant, mock_client: MagicMock) -> No
         )
     assert err.value.translation_key == "command_failed"
     assert hass.states.get("switch.catan_c1_pump").state == STATE_ON
+
+
+@pytest.mark.usefixtures("init_integration")
+async def test_change_setting(hass: HomeAssistant, mock_client: MagicMock) -> None:
+    """Test changing a setting of a channel."""
+    assert hass.states.get("switch.catan_c1_pump_inverted").state == STATE_OFF
+
+    await hass.services.async_call(
+        SWITCH_DOMAIN,
+        SERVICE_TURN_ON,
+        {ATTR_ENTITY_ID: "switch.catan_c1_pump_inverted"},
+        blocking=True,
+    )
+    mock_client.set_channel_config.assert_awaited_once_with(
+        Channel(Interface.DOI, 9), ChannelConfigUpdate(inverted=True)
+    )
+    assert hass.states.get("switch.catan_c1_pump_inverted").state == STATE_ON
+    # The physical output is inverted now, the logical value stays on.
+    assert mock_client.states[Channel(Interface.DOI, 9)].digital_value is False
+    assert hass.states.get("switch.catan_c1_pump").state == STATE_ON
+
+    entity_id = "switch.catan_c1_pump_default_value_on_connection_loss"
+    assert hass.states.get(entity_id).state == STATE_ON
+    await hass.services.async_call(
+        SWITCH_DOMAIN, SERVICE_TURN_OFF, {ATTR_ENTITY_ID: entity_id}, blocking=True
+    )
+    mock_client.set_channel_config.assert_awaited_with(
+        Channel(Interface.DOI, 9), ChannelConfigUpdate(default_on_failure=False)
+    )
+    assert hass.states.get(entity_id).state == STATE_OFF
+
+
+@pytest.mark.usefixtures("init_integration")
+async def test_settings_of_mode(hass: HomeAssistant) -> None:
+    """Test only the settings of the mode and of DOI channels are offered."""
+    assert hass.states.get("switch.catan_c1_doi_10_debounced").state == STATE_ON
+    assert hass.states.get("switch.catan_c1_doi_10_default_value") is None
+    assert hass.states.get("switch.catan_c1_pump_debounced") is None
+    assert hass.states.get("switch.catan_c1_uv_2_inverted") is None

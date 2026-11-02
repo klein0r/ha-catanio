@@ -11,6 +11,7 @@ from custom_components.catanio.api import (
     CatanIOProtocolError,
     CatanIOResponseError,
     Channel,
+    ChannelConfigUpdate,
     ChannelMode,
     Interface,
     IoErrorCode,
@@ -243,3 +244,41 @@ def test_ipv6_uri(coap_context: aiocoap.Context) -> None:
     """Test IPv6 addresses are put in brackets."""
     client = CatanIOClient("fe80::1", coap_context)
     assert client._base_uri == "coap://[fe80::1]:5683"
+
+
+async def test_set_channel_config(
+    client: CatanIOClient, fake_device: FakeCatanDevice
+) -> None:
+    """Test only the changed settings are sent and the channel is marked configured."""
+    doi9 = Channel(Interface.DOI, 9)
+    config = await client.set_channel_config(
+        doi9, ChannelConfigUpdate(mode=ChannelMode.DIGITAL_INPUT, debounced=True)
+    )
+    assert config.mode is ChannelMode.DIGITAL_INPUT
+    assert config.debounced is True
+    assert config.default_on_failure is True
+    assert config.configured is True
+
+    _, path, request = fake_device.requests[-1]
+    assert path == "doi/9/cfg"
+    assert request.type == UoiType.DI
+    assert request.debounced == BooleanSetting.TRUE
+    assert request.configured == BooleanSetting.TRUE
+    assert request.inverted == BooleanSetting.DONT_CHANGE
+    assert request.use_default_val_on_failure == BooleanSetting.DONT_CHANGE
+    assert request.enabled == BooleanSetting.DONT_CHANGE
+
+    await client.set_channel_config(doi9, ChannelConfigUpdate(inverted=False))
+    request = fake_device.requests[-1][2]
+    assert request.type == UoiType.DONT_CHANGE
+    assert request.inverted == BooleanSetting.FALSE
+
+
+async def test_set_channel_config_invalid(client: CatanIOClient) -> None:
+    """Test settings that do not apply to a channel are rejected."""
+    with pytest.raises(ValueError, match="UI 1 cannot be configured"):
+        await client.set_channel_config(UI1, ChannelConfigUpdate(inverted=True))
+    with pytest.raises(ValueError, match="unknown is not a mode of DOI 9"):
+        await client.set_channel_config(
+            Channel(Interface.DOI, 9), ChannelConfigUpdate(mode=ChannelMode.UNKNOWN)
+        )

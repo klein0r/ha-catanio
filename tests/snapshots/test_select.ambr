@@ -1,0 +1,245 @@
+# serializer version: 1
+# name: test_selects[platforms0][select.catan_c1_doi_10_mode-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.catan_c1_doi_10_mode',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 10 mode',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 10 mode',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'mode',
+    'unique_id': '1234567890_doi10_mode',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_doi_10_mode-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 10 mode',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.catan_c1_doi_10_mode',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'digital_input',
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_doi_11_mode-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.catan_c1_doi_11_mode',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 11 mode',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 11 mode',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'mode',
+    'unique_id': '1234567890_doi11_mode',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_doi_11_mode-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 11 mode',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.catan_c1_doi_11_mode',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'counter',
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_doi_12_mode-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.catan_c1_doi_12_mode',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 12 mode',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 12 mode',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'mode',
+    'unique_id': '1234567890_doi12_mode',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_doi_12_mode-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 12 mode',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.catan_c1_doi_12_mode',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'digital_output',
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_pump_mode-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.catan_c1_pump_mode',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pump mode',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Pump mode',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'mode',
+    'unique_id': '1234567890_doi9_mode',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[platforms0][select.catan_c1_pump_mode-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Pump mode',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'digital_output',
+        'digital_input',
+        'counter',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.catan_c1_pump_mode',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'digital_output',
+  })
+# ---

@@ -43,6 +43,29 @@ Entities of the virtual display data points (UV), diagnostic values, switching
 cycles and on times are disabled by default. Enable them on the device page if
 you need them.
 
+### Configuring DOI channels
+
+The digital channels (DOI) can be configured on the device page under
+**Configuration**:
+
+| Entity | Mode | Setting |
+|---|---|---|
+| *Channel* mode | every mode | Digital output, digital input or counter |
+| *Channel* inverted | digital input and output | Inverts the signal |
+| *Channel* debounced | digital input | Debounces the input |
+| *Channel* default value | digital output | Value used on start or connection loss |
+| *Channel* default value on start | digital output | Use the default value after a restart |
+| *Channel* default value on connection loss | digital output | Use the default value when the controller connection is lost |
+
+The mode select is disabled by default: switching a channel with a wired
+contact or sensor to a digital output drives 24 V into that circuit. Enable the
+select on the device page before you change the mode. After a mode change the
+entry reloads and the entities of the channel are replaced.
+
+The settings are written to the device and only the changed value is sent. The
+channel is marked as configured. The display or other tools that configure the
+device can change the same settings, the last write wins.
+
 ## Requirements
 
 - Home Assistant 2026.10 or newer. The Marketplace is part of Home Assistant
@@ -125,9 +148,10 @@ data:
 
 ## Known limitations
 
-- The channel configuration (mode, name, unit, limits) is read from the device
-  and cannot be changed from Home Assistant. Use the display or the commissioning
-  tool for that.
+- Only the DOI channels can be configured from Home Assistant. The configuration
+  of the universal inputs (UI), universal outputs (UOI), relays (DOR) and the
+  channel names is read from the device. Use the display or the commissioning
+  tool to change it.
 - Overrides, counter initialization and wiring tests of the API are not
   available as actions yet.
 - Values are polled. The CatanIO documentation states that CoAP Observe has to

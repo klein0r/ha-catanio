@@ -17,6 +17,7 @@ from .api import (
     CatanIOError,
     Channel,
     ChannelConfig,
+    ChannelMode,
     ChannelState,
     DeviceIdentity,
     ModuleType,
@@ -60,6 +61,7 @@ class CatanIOCoordinator(DataUpdateCoordinator[CatanIOData]):
         )
         self.client = client
         self._reload_scheduled = False
+        self._modes_resolved = False
 
     @property
     def unique_id(self) -> str:
@@ -161,22 +163,51 @@ class CatanIOCoordinator(DataUpdateCoordinator[CatanIOData]):
 
     @callback
     def _async_check_modes(self, channels: dict[Channel, ChannelState]) -> None:
-        """Reload the entry when a channel was switched to another mode."""
-        if self._reload_scheduled:
-            return
+        """Follow the mode the channels report at runtime.
+
+        The runtime type is the effective one, the configuration may only name
+        the default type. Before the entities exist the runtime mode is taken
+        over, afterwards a different mode reloads the entry.
+        """
         for channel, state in channels.items():
-            if state.mode is None or state.mode is self.channel_configs[channel].mode:
+            config = self.channel_configs[channel]
+            if state.mode is None or state.mode is config.mode:
                 continue
-            _LOGGER.info(
-                "%s of %s changed from %s to %s, reloading",
-                channel.label,
-                self.client.host,
-                self.channel_configs[channel].mode,
-                state.mode,
-            )
-            self._reload_scheduled = True
-            self.hass.config_entries.async_schedule_reload(self.config_entry.entry_id)
+            if self._modes_resolved:
+                self._async_reload_on_mode_change(channel, state.mode)
+            else:
+                self.channel_configs[channel] = replace(config, mode=state.mode)
+        self._modes_resolved = True
+
+    @callback
+    def _async_reload_on_mode_change(self, channel: Channel, mode: ChannelMode) -> bool:
+        """Reload the entry to replace the entities of a channel.
+
+        Return True if a reload is scheduled.
+        """
+        if self._reload_scheduled:
+            return True
+        if mode is self.channel_configs[channel].mode:
+            return False
+        _LOGGER.info(
+            "%s of %s changed from %s to %s, reloading",
+            channel.label,
+            self.client.host,
+            self.channel_configs[channel].mode,
+            mode,
+        )
+        self._reload_scheduled = True
+        self.hass.config_entries.async_schedule_reload(self.config_entry.entry_id)
+        return True
+
+    async def async_apply_channel_config(self, config: ChannelConfig) -> None:
+        """Store the configuration returned by a write request."""
+        if self._async_reload_on_mode_change(config.channel, config.mode):
             return
+        self.channel_configs[config.channel] = config
+        self.async_update_listeners()
+        # Settings like the inversion change the runtime values.
+        await self.async_request_refresh()
 
     @callback
     def async_set_channel_state(self, channel: Channel, state: ChannelState) -> None:

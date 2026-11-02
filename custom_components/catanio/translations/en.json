@@ -78,6 +78,16 @@
         "name": "{channel}"
       }
     },
+    "select": {
+      "mode": {
+        "name": "{channel} mode",
+        "state": {
+          "digital_output": "Digital output",
+          "digital_input": "Digital input",
+          "counter": "Counter"
+        }
+      }
+    },
     "sensor": {
       "analog_input": {
         "name": "{channel}"
@@ -149,6 +159,21 @@
     "switch": {
       "digital_output": {
         "name": "{channel}"
+      },
+      "inverted": {
+        "name": "{channel} inverted"
+      },
+      "debounced": {
+        "name": "{channel} debounced"
+      },
+      "digital_default": {
+        "name": "{channel} default value"
+      },
+      "default_on_start": {
+        "name": "{channel} default value on start"
+      },
+      "default_on_failure": {
+        "name": "{channel} default value on connection loss"
       }
     }
   },

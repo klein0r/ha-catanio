@@ -13,6 +13,8 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .api import (
     CatanIOError,
     Channel,
+    ChannelConfig,
+    ChannelConfigUpdate,
     ChannelMode,
     ChannelState,
     Interface,
@@ -77,13 +79,17 @@ class CatanIOChannelEntity(CatanIOEntity):
         super().__init__(coordinator, f"{channel.key}_{description.key}")
         self.entity_description = description
         self.channel = channel
-        self.channel_config = coordinator.channel_configs[channel]
         self._attr_translation_placeholders = {
             "channel": self.channel_config.display_name
         }
         if channel.interface is Interface.UV:
             # Virtual display data points are rarely used from Home Assistant.
             self._attr_entity_registry_enabled_default = False
+
+    @property
+    def channel_config(self) -> ChannelConfig:
+        """Return the current configuration of the channel."""
+        return self.coordinator.channel_configs[self.channel]
 
     @property
     def channel_state(self) -> ChannelState | None:
@@ -103,6 +109,13 @@ class CatanIOChannelEntity(CatanIOEntity):
         """Send a write request and store the returned state."""
         state = await self._async_call(request)
         self.coordinator.async_set_channel_state(self.channel, state)
+
+    async def _async_write_config(self, update: ChannelConfigUpdate) -> None:
+        """Change the configuration of the channel."""
+        config = await self._async_call(
+            self.coordinator.client.set_channel_config(self.channel, update)
+        )
+        await self.coordinator.async_apply_channel_config(config)
 
 
 def channel_entity_descriptions[D: CatanIOChannelEntityDescription](

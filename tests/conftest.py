@@ -1,14 +1,14 @@
 """Fixtures for the CatanIO tests."""
 
 from collections.abc import Generator
-from dataclasses import replace
+from dataclasses import asdict, replace
 from unittest.mock import AsyncMock, MagicMock, PropertyMock, patch
 
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.catanio import PLATFORMS
-from custom_components.catanio.api import Channel
+from custom_components.catanio.api import Channel, ChannelConfigUpdate
 from custom_components.catanio.const import DOMAIN
 from homeassistant.const import CONF_HOST, Platform
 from homeassistant.core import HomeAssistant
@@ -80,6 +80,19 @@ def mock_client() -> Generator[MagicMock]:
         )
         return states[channel]
 
+    def set_channel_config(channel: Channel, update: ChannelConfigUpdate):
+        changes = {
+            key: value for key, value in asdict(update).items() if value is not None
+        }
+        configs[channel] = replace(configs[channel], configured=True, **changes)
+        state = states[channel]
+        states[channel] = replace(
+            state,
+            mode=configs[channel].mode,
+            digital_value=state.digital_set_value != configs[channel].inverted,
+        )
+        return configs[channel]
+
     def set_analog(channel: Channel, value: float):
         states[channel] = replace(
             states[channel], analog_set_value=value, analog_value=value
@@ -98,6 +111,7 @@ def mock_client() -> Generator[MagicMock]:
     client.get_channel_state = AsyncMock(side_effect=lambda channel: states[channel])
     client.set_digital = AsyncMock(side_effect=set_digital)
     client.set_analog = AsyncMock(side_effect=set_analog)
+    client.set_channel_config = AsyncMock(side_effect=set_channel_config)
     client.identify = AsyncMock()
     client.reboot = AsyncMock()
     with patch("custom_components.catanio.CatanIOClient", return_value=client):

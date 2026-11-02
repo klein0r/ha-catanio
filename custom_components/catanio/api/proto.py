@@ -33,6 +33,7 @@ UiCfgResp = _message_class("UiCfgResp")
 UiReq = _message_class("UiReq")
 UiResp = _message_class("UiResp")
 
+UoiCfgReq = _message_class("UoiCfgReq")
 UoiCfgResp = _message_class("UoiCfgResp")
 UoiReq = _message_class("UoiReq")
 UoiResp = _message_class("UoiResp")

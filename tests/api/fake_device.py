@@ -53,6 +53,9 @@ class FakeCatanDevice:
             actuator_val=2.5,
         )
         self.dor1: Any = proto.DorResp(digital_val=False, counter_val=3)
+        self.doi9_cfg: Any = proto.UoiCfgResp(
+            enabled=True, type=UoiType.DO, use_default_val_on_failure=True
+        )
         self.site = resource.Site()
         for path in (
             "sys",
@@ -62,6 +65,7 @@ class FakeCatanDevice:
             "ui/1/cfg",
             "uoi/13",
             "uoi/13/cfg",
+            "doi/9/cfg",
             "dor/1",
             "dor/1/cfg",
         ):
@@ -168,6 +172,23 @@ class FakeCatanDevice:
 
     def _get_uoi_13_cfg(self, payload: bytes) -> tuple[Any, Any]:
         return None, proto.UoiCfgResp(enabled=True, type=UoiType.AO_VOLTAGE)
+
+    def _patch_doi_9_cfg(self, payload: bytes) -> tuple[Any, Any]:
+        request: Any = proto.UoiCfgReq.FromString(payload)
+        config = self.doi9_cfg
+        if request.type != UoiType.DONT_CHANGE:
+            config.type = request.type
+        for field in (
+            "inverted",
+            "debounced",
+            "digital_default_val",
+            "use_default_val_on_start",
+            "use_default_val_on_failure",
+            "configured",
+        ):
+            if (value := getattr(request, field)) != BooleanSetting.DONT_CHANGE:
+                setattr(config, field, value == BooleanSetting.TRUE)
+        return request, config
 
     def _get_dor_1(self, payload: bytes) -> tuple[Any, Any]:
         return None, self.dor1

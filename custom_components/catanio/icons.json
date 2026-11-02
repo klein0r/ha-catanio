@@ -16,6 +16,11 @@
         "default": "mdi:knob"
       }
     },
+    "select": {
+      "mode": {
+        "default": "mdi:tune-variant"
+      }
+    },
     "sensor": {
       "sensor_value": {
         "default": "mdi:gauge"
@@ -51,6 +56,21 @@
         "state": {
           "on": "mdi:toggle-switch-variant"
         }
+      },
+      "inverted": {
+        "default": "mdi:swap-vertical"
+      },
+      "debounced": {
+        "default": "mdi:timer-sand"
+      },
+      "digital_default": {
+        "default": "mdi:restore"
+      },
+      "default_on_start": {
+        "default": "mdi:power"
+      },
+      "default_on_failure": {
+        "default": "mdi:lan-disconnect"
       }
     }
   }

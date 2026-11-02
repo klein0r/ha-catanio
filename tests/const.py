@@ -46,6 +46,10 @@ def config(
     inverted: bool = False,
     minimum: float | None = None,
     maximum: float | None = None,
+    debounced: bool = False,
+    digital_default: bool = False,
+    default_on_start: bool = False,
+    default_on_failure: bool = False,
 ) -> ChannelConfig:
     """Return a channel configuration."""
     return ChannelConfig(
@@ -60,6 +64,10 @@ def config(
         minimum=minimum,
         maximum=maximum,
         override_enabled=True,
+        debounced=debounced,
+        digital_default=digital_default,
+        default_on_start=default_on_start,
+        default_on_failure=default_on_failure,
     )
 
 
@@ -129,8 +137,13 @@ def c1_configs() -> dict[Channel, ChannelConfig]:
         config(Channel(UI, 6), ANALOG, unit="%", ui_type=UiType.AI_CURRENT_4_20),
         config(Channel(UI, 7), ANALOG, ui_type=UiType.AI_VOLTAGE, enabled=False),
         config(Channel(UI, 8), ANALOG, ui_type=UiType.AI_VOLTAGE, enabled=False),
-        config(Channel(DOI, 9), DIGITAL_OUT, name="Pump"),
-        config(Channel(DOI, 10), DIGITAL_IN),
+        config(
+            Channel(DOI, 9),
+            DIGITAL_OUT,
+            name="Pump",
+            default_on_failure=True,
+        ),
+        config(Channel(DOI, 10), DIGITAL_IN, debounced=True),
         config(Channel(DOI, 11), COUNTER),
         config(Channel(DOI, 12), DIGITAL_OUT, inverted=True),
         config(Channel(UOI, 13), ANALOG_OUT, minimum=0.0, maximum=10.0),

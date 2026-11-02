@@ -284,11 +284,30 @@ class ChannelConfig:
     minimum: float | None
     maximum: float | None
     override_enabled: bool
+    debounced: bool
+    digital_default: bool
+    default_on_start: bool
+    default_on_failure: bool
 
     @property
     def display_name(self) -> str:
         """Return the user-defined name, or the terminal designation."""
         return self.name.strip() or self.channel.label
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class ChannelConfigUpdate:
+    """Changes to the configuration of a channel.
+
+    The fields match ``ChannelConfig``, None keeps the current value.
+    """
+
+    mode: ChannelMode | None = None
+    inverted: bool | None = None
+    debounced: bool | None = None
+    digital_default: bool | None = None
+    default_on_start: bool | None = None
+    default_on_failure: bool | None = None
 
 
 @dataclass(frozen=True, slots=True)

@@ -21,6 +21,7 @@ from .models import (
     BooleanSetting,
     Channel,
     ChannelConfig,
+    ChannelConfigUpdate,
     ChannelMode,
     ChannelState,
     DeviceIdentity,
@@ -51,6 +52,9 @@ UOI_TYPE_MODES = {
     UoiType.COUNTER: ChannelMode.COUNTER,
     UoiType.AO_VOLTAGE: ChannelMode.ANALOG_OUTPUT,
 }
+MODE_UOI_TYPES = {mode: uoi_type for uoi_type, mode in UOI_TYPE_MODES.items()}
+# Interfaces configured with the UOI message definitions.
+UOI_INTERFACES = frozenset({Interface.UOI, Interface.DOI, Interface.UV})
 
 _CONFIG_RESPONSES: dict[Interface, type[Message]] = {
     Interface.UI: proto.UiCfgResp,
@@ -111,6 +115,12 @@ def _limit(minimum: float, maximum: float) -> tuple[float | None, float | None]:
     return _float(minimum), _float(maximum)
 
 
+def _boolean_setting(value: bool | None) -> BooleanSetting:
+    if value is None:
+        return BooleanSetting.DONT_CHANGE
+    return BooleanSetting.TRUE if value else BooleanSetting.FALSE
+
+
 def _format_mac(raw: bytes) -> str | None:
     if len(raw) != 6 or not any(raw):
         return None
@@ -142,6 +152,10 @@ def parse_channel_config(channel: Channel, message: Any) -> ChannelConfig:
             minimum=None,
             maximum=None,
             override_enabled=message.override_enabled,
+            debounced=False,
+            digital_default=message.digital_default_val,
+            default_on_start=message.use_default_val_on_start,
+            default_on_failure=message.use_default_val_on_failure,
         )
     ui_type: UiType | None = None
     if channel.interface is Interface.UI:
@@ -150,6 +164,14 @@ def parse_channel_config(channel: Channel, message: Any) -> ChannelConfig:
     else:
         mode = uoi_type_mode(_enum(UoiType, message.type))
     minimum, maximum = _limit(message.minimum, message.maximum)
+    if channel.interface is Interface.UI:
+        # Universal inputs have no debouncing and no output defaults.
+        debounced = digital_default = default_on_start = default_on_failure = False
+    else:
+        debounced = message.debounced
+        digital_default = message.digital_default_val
+        default_on_start = message.use_default_val_on_start
+        default_on_failure = message.use_default_val_on_failure
     return ChannelConfig(
         channel=channel,
         enabled=message.enabled,
@@ -162,6 +184,10 @@ def parse_channel_config(channel: Channel, message: Any) -> ChannelConfig:
         minimum=minimum,
         maximum=maximum,
         override_enabled=message.override_enabled,
+        debounced=debounced,
+        digital_default=digital_default,
+        default_on_start=default_on_start,
+        default_on_failure=default_on_failure,
     )
 
 
@@ -365,6 +391,35 @@ class CatanIOClient:
         """Read the effective configuration of a channel."""
         response = await self._call(
             aiocoap.GET, f"{channel.path}/cfg", _CONFIG_RESPONSES[channel.interface]
+        )
+        return parse_channel_config(channel, response)
+
+    async def set_channel_config(
+        self, channel: Channel, update: ChannelConfigUpdate
+    ) -> ChannelConfig:
+        """Change the configuration of a UOI, DOI or UV channel.
+
+        Only the fields set in the update are sent, the device keeps all other
+        values. The channel is marked as configured.
+        """
+        if channel.interface not in UOI_INTERFACES:
+            raise ValueError(f"{channel.label} cannot be configured")
+        uoi_type = UoiType.DONT_CHANGE
+        if update.mode is not None:
+            if update.mode not in MODE_UOI_TYPES:
+                raise ValueError(f"{update.mode} is not a mode of {channel.label}")
+            uoi_type = MODE_UOI_TYPES[update.mode]
+        request = proto.UoiCfgReq(
+            type=uoi_type,
+            inverted=_boolean_setting(update.inverted),
+            debounced=_boolean_setting(update.debounced),
+            digital_default_val=_boolean_setting(update.digital_default),
+            use_default_val_on_start=_boolean_setting(update.default_on_start),
+            use_default_val_on_failure=_boolean_setting(update.default_on_failure),
+            configured=BooleanSetting.TRUE,
+        )
+        response = await self._call(
+            aiocoap.PATCH, f"{channel.path}/cfg", proto.UoiCfgResp, request
         )
         return parse_channel_config(channel, response)
 
