@@ -12,4 +12,4 @@ ruff==0.17.3
 types-protobuf==7.35.1.20260906
 
 # Regenerating the descriptor set (script/generate_descriptor.py)
-grpcio-tools==1.85.0
+grpcio-tools==1.85.1
