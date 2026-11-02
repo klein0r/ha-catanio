@@ -1,0 +1,93 @@
+[project]
+name = "ha-catanio"
+version = "0.1.0"
+description = "Home Assistant integration for Phoenix Contact CatanIO devices"
+requires-python = ">=3.14.2"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["custom_components.catanio"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95
+
+[tool.ruff]
+target-version = "py314"
+required-version = ">=0.15"
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "ASYNC",
+    "B",
+    "BLE",
+    "C4",
+    "D",
+    "E",
+    "F",
+    "FLY",
+    "G",
+    "I",
+    "LOG",
+    "N",
+    "PERF",
+    "PGH",
+    "PIE",
+    "PL",
+    "PT",
+    "RET",
+    "RSE",
+    "RUF",
+    "SIM",
+    "SLF",
+    "T20",
+    "TC",
+    "TRY",
+    "UP",
+    "W",
+]
+ignore = [
+    "D202",
+    "D203",
+    "D213",
+    "E501",
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR2004",
+    "TC001",
+    "TC002",
+    "TC003",
+    "TRY003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR0917", "SLF001"]
+"script/*" = ["T201"]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = ["custom_components.catanio", "homeassistant"]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+warn_unreachable = true
+enable_error_code = ["explicit-override", "ignore-without-code", "redundant-self", "truthy-iterable"]
+explicit_package_bases = true
+files = ["custom_components/catanio"]
+
+[[tool.mypy.overrides]]
+module = ["aiocoap", "aiocoap.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["homeassistant.*"]
+implicit_reexport = true

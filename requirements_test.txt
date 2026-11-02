@@ -1,0 +1,15 @@
+# Pins Home Assistant 2026.10.4 and its test dependencies
+pytest-homeassistant-custom-component==0.13.375
+pytest-cov==7.1.0
+
+# Runtime requirements of the integration
+aiocoap==0.4.17
+protobuf==7.36.0
+
+# Linting and typing
+mypy==2.4.0
+ruff==0.17.3
+types-protobuf==7.35.1.20260906
+
+# Regenerating the descriptor set (script/generate_descriptor.py)
+grpcio-tools==1.85.0

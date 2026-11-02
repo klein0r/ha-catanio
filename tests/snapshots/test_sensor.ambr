@@ -1,0 +1,3791 @@
+# serializer version: 1
+# name: test_sensors[sensor.catan_c1_doi_10_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_10_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 10 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 10 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_doi10_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 10 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_10_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_on_time-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_10_on_time',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 10 on time',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+      'sensor.private': dict({
+        'suggested_unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.DURATION: 'duration'>,
+    'original_icon': None,
+    'original_name': 'DOI 10 on time',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'on_time',
+    'unique_id': '1234567890_doi10_on_time',
+    'unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_on_time-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'duration',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 10 on time',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTime.HOURS: 'h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_10_on_time',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_10_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 10 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 10 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_doi10_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 10 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_10_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_switching_cycles-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_10_switching_cycles',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 10 switching cycles',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 10 switching cycles',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'switching_cycles',
+    'unique_id': '1234567890_doi10_switching_cycles',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_10_switching_cycles-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 10 switching cycles',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_10_switching_cycles',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '7',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_11',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 11',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 11',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'counter',
+    'unique_id': '1234567890_doi11_scaled_counter',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 11',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_11',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '99.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_11_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 11 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 11 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_doi11_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 11 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_11_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_pulses-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_11_pulses',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 11 pulses',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 11 pulses',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'pulses',
+    'unique_id': '1234567890_doi11_pulses',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_pulses-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 11 pulses',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_11_pulses',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '99',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_11_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 11 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 11 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_doi11_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_11_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 11 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_11_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_12_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 12 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 12 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_doi12_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 12 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_12_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_on_time-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_12_on_time',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 12 on time',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+      'sensor.private': dict({
+        'suggested_unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.DURATION: 'duration'>,
+    'original_icon': None,
+    'original_name': 'DOI 12 on time',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'on_time',
+    'unique_id': '1234567890_doi12_on_time',
+    'unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_on_time-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'duration',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 12 on time',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTime.HOURS: 'h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_12_on_time',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_doi_12_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 12 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'DOI 12 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_doi12_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 12 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_12_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_switching_cycles-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_doi_12_switching_cycles',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'DOI 12 switching cycles',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'DOI 12 switching cycles',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'switching_cycles',
+    'unique_id': '1234567890_doi12_switching_cycles',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_doi_12_switching_cycles-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 DOI 12 switching cycles',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_doi_12_switching_cycles',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_heat_meter',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Heat meter',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.ENERGY: 'energy'>,
+    'original_icon': None,
+    'original_name': 'Heat meter',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'counter',
+    'unique_id': '1234567890_ui3_scaled_counter',
+    'unit_of_measurement': 'kWh',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Heat meter',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: 'kWh',
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_heat_meter',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '12.5',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_heat_meter_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Heat meter error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Heat meter error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui3_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Heat meter error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_heat_meter_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_pulses-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_heat_meter_pulses',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Heat meter pulses',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Heat meter pulses',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'pulses',
+    'unique_id': '1234567890_ui3_pulses',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_pulses-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Heat meter pulses',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_heat_meter_pulses',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '1250',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_heat_meter_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Heat meter status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Heat meter status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui3_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_heat_meter_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Heat meter status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_heat_meter_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Outdoor temperature',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.TEMPERATURE: 'temperature'>,
+    'original_icon': None,
+    'original_name': 'Outdoor temperature',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'analog_input',
+    'unique_id': '1234567890_ui1_value',
+    'unit_of_measurement': <UnitOfTemperature.CELSIUS: '°C'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'temperature',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Outdoor temperature',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTemperature.CELSIUS: '°C'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '21.5',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Outdoor temperature error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Outdoor temperature error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui1_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Outdoor temperature error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_sensor_value-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_sensor_value',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Outdoor temperature sensor value',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.TEMPERATURE: 'temperature'>,
+    'original_icon': None,
+    'original_name': 'Outdoor temperature sensor value',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'sensor_value',
+    'unique_id': '1234567890_ui1_sensor_value',
+    'unit_of_measurement': <UnitOfTemperature.CELSIUS: '°C'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_sensor_value-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'temperature',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Outdoor temperature sensor value',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTemperature.CELSIUS: '°C'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_sensor_value',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '21.4',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Outdoor temperature status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Outdoor temperature status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui1_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_outdoor_temperature_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Outdoor temperature status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_outdoor_temperature_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_points_in_failure-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_points_in_failure',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Points in failure',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Points in failure',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'points_in_failure',
+    'unique_id': '1234567890_points_in_failure',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_points_in_failure-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Points in failure',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_points_in_failure',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '1',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_points_overridden-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_points_overridden',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Points overridden',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Points overridden',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'points_overridden',
+    'unique_id': '1234567890_points_overridden',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_points_overridden-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Points overridden',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_points_overridden',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_pump_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pump error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Pump error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_doi9_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Pump error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_pump_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_on_time-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_pump_on_time',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pump on time',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+      'sensor.private': dict({
+        'suggested_unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.DURATION: 'duration'>,
+    'original_icon': None,
+    'original_name': 'Pump on time',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'on_time',
+    'unique_id': '1234567890_doi9_on_time',
+    'unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_on_time-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'duration',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Pump on time',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTime.HOURS: 'h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_pump_on_time',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_pump_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pump status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'Pump status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_doi9_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Pump status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_pump_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_switching_cycles-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_pump_switching_cycles',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pump switching cycles',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Pump switching cycles',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'switching_cycles',
+    'unique_id': '1234567890_doi9_switching_cycles',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_pump_switching_cycles-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 Pump switching cycles',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_pump_switching_cycles',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_2_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 2 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 2 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui2_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 2 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_2_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_on_time-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_ui_2_on_time',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 2 on time',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+      'sensor.private': dict({
+        'suggested_unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.DURATION: 'duration'>,
+    'original_icon': None,
+    'original_name': 'UI 2 on time',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'on_time',
+    'unique_id': '1234567890_ui2_on_time',
+    'unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_on_time-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'duration',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 2 on time',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTime.HOURS: 'h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_2_on_time',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '1.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_2_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 2 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 2 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui2_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 2 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_2_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_switching_cycles-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_ui_2_switching_cycles',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 2 switching cycles',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'UI 2 switching cycles',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'switching_cycles',
+    'unique_id': '1234567890_ui2_switching_cycles',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_2_switching_cycles-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 2 switching cycles',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_2_switching_cycles',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '42',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_ui_4',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 4',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.VOLTAGE: 'voltage'>,
+    'original_icon': None,
+    'original_name': 'UI 4',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'analog_input',
+    'unique_id': '1234567890_ui4_value',
+    'unit_of_measurement': <UnitOfElectricPotential.VOLT: 'V'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'voltage',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 4',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfElectricPotential.VOLT: 'V'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_4',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '4.2',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_4_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 4 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 4 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui4_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 4 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_4_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_sensor_value-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_4_sensor_value',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 4 sensor value',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.VOLTAGE: 'voltage'>,
+    'original_icon': None,
+    'original_name': 'UI 4 sensor value',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'sensor_value',
+    'unique_id': '1234567890_ui4_sensor_value',
+    'unit_of_measurement': <UnitOfElectricPotential.VOLT: 'V'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_sensor_value-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'voltage',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 4 sensor value',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfElectricPotential.VOLT: 'V'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_4_sensor_value',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '4.2',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_4_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 4 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 4 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui4_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_4_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 4 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_4_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_ui_5',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 5',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'UI 5',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'analog_input',
+    'unique_id': '1234567890_ui5_value',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 5',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_5',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '1080.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_5_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 5 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 5 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui5_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 5 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_5_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_sensor_value-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_5_sensor_value',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 5 sensor value',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'UI 5 sensor value',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'sensor_value',
+    'unique_id': '1234567890_ui5_sensor_value',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_sensor_value-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 5 sensor value',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_5_sensor_value',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '1080.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_5_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 5 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 5 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui5_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_5_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 5 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_5_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_ui_6',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 6',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'UI 6',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'analog_input',
+    'unique_id': '1234567890_ui6_value',
+    'unit_of_measurement': '%',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 6',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: '%',
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_6',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'unavailable',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_6_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 6 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 6 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_ui6_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 6 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_6_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'sensor_not_conn',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_sensor_value-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_6_sensor_value',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 6 sensor value',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.CURRENT: 'current'>,
+    'original_icon': None,
+    'original_name': 'UI 6 sensor value',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'sensor_value',
+    'unique_id': '1234567890_ui6_sensor_value',
+    'unit_of_measurement': <UnitOfElectricCurrent.MILLIAMPERE: 'mA'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_sensor_value-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'current',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 6 sensor value',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfElectricCurrent.MILLIAMPERE: 'mA'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_6_sensor_value',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'unavailable',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_ui_6_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UI 6 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UI 6 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_ui6_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_ui_6_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UI 6 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_ui_6_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'failure',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_actuator_voltage-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uoi_13_actuator_voltage',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UOI 13 actuator voltage',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.VOLTAGE: 'voltage'>,
+    'original_icon': None,
+    'original_name': 'UOI 13 actuator voltage',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'actuator_value',
+    'unique_id': '1234567890_uoi13_actuator_value',
+    'unit_of_measurement': <UnitOfElectricPotential.VOLT: 'V'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_actuator_voltage-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'voltage',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UOI 13 actuator voltage',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfElectricPotential.VOLT: 'V'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uoi_13_actuator_voltage',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '5.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uoi_13_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UOI 13 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UOI 13 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_uoi13_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UOI 13 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uoi_13_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uoi_13_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UOI 13 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UOI 13 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_uoi13_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_13_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UOI 13 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uoi_13_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_14_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uoi_14_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UOI 14 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UOI 14 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_uoi14_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_14_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UOI 14 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uoi_14_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_14_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uoi_14_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UOI 14 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UOI 14 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_uoi14_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uoi_14_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UOI 14 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uoi_14_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'unconfigured',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_1_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uv_1_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 1 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UV 1 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_uv1_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_1_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 1 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_1_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_1_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uv_1_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 1 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UV 1 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_uv1_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_1_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 1 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_1_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_error-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uv_2_error',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 2 error',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UV 2 error',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'error',
+    'unique_id': '1234567890_uv2_error',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_error-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 2 error',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'periphery',
+        'res_high',
+        'temp_high',
+        'in_volt_high',
+        'in_curr_shunt_res_high',
+        'out_volt_high',
+        'warn_lim_high',
+        'temp_low',
+        'neg_in_volt',
+        'in_curr_small',
+        'neg_in_curr',
+        'neg_in_curr_sensor_not_conn',
+        'out_volt_small',
+        'warn_lim_low',
+        'sensor_not_conn',
+        'low_level_exceeds_volt_limit',
+        'out_overload',
+        'virt_null',
+        'virt_alarm',
+        'virt_stale',
+        'virt_down',
+        'virt_fault',
+        'virt_disabled',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_2_error',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'ok',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_on_time-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_uv_2_on_time',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 2 on time',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+      'sensor.private': dict({
+        'suggested_unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.DURATION: 'duration'>,
+    'original_icon': None,
+    'original_name': 'UV 2 on time',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'on_time',
+    'unique_id': '1234567890_uv2_on_time',
+    'unit_of_measurement': <UnitOfTime.HOURS: 'h'>,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_on_time-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'duration',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 2 on time',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfTime.HOURS: 'h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_2_on_time',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0.0',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_status-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.catan_c1_uv_2_status',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 2 status',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
+    'original_icon': None,
+    'original_name': 'UV 2 status',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'status',
+    'unique_id': '1234567890_uv2_status',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_status-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'enum',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 2 status',
+      <SensorEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'ok',
+        'failure',
+        'overridden',
+        'disabled',
+        'unconfigured',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_2_status',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'overridden',
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_switching_cycles-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.catan_c1_uv_2_switching_cycles',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'UV 2 switching cycles',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'UV 2 switching cycles',
+    'platform': 'catanio',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'switching_cycles',
+    'unique_id': '1234567890_uv2_switching_cycles',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_sensors[sensor.catan_c1_uv_2_switching_cycles-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'CATAN C1 UV 2 switching cycles',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.catan_c1_uv_2_switching_cycles',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0',
+  })
+# ---

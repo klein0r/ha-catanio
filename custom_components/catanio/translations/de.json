@@ -1,0 +1,172 @@
+{
+  "config": {
+    "flow_title": "{name} ({host})",
+    "progress": {
+      "discovering": "Der lokale Bus des Catan C1 wird nach CatanIO-Geräten durchsucht. Das kann bis zu einer Minute dauern."
+    },
+    "step": {
+      "pick_device": {
+        "title": "Gerät auswählen",
+        "description": "Diese CatanIO-Geräte wurden am lokalen Bus des Catan C1 gefunden. Geräte, die du jetzt nicht einrichtest, werden später als entdeckte Geräte vorgeschlagen.",
+        "data": {
+          "device": "Gerät"
+        }
+      },
+      "manual": {
+        "title": "Adresse eingeben",
+        "description": "Gib die Adresse des CatanIO-Geräts ein.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP-Adresse des CatanIO-Geräts, zum Beispiel 169.254.253.1 für die I/Os des Catan C1."
+        }
+      },
+      "discovery_confirm": {
+        "description": "Möchtest du {name} unter {host} einrichten?"
+      },
+      "reconfigure": {
+        "title": "Adresse ändern",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP-Adresse des CatanIO-Geräts."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen. Stelle sicher, dass Home Assistant das Gerät über UDP-Port 5683 erreicht.",
+      "not_catanio": "Das Gerät hat nicht wie ein CatanIO-Gerät geantwortet.",
+      "unsupported_model": "Das Gerätemodell wird nicht unterstützt.",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+      "already_configured": "Gerät ist bereits eingerichtet",
+      "already_in_progress": "Die Einrichtung läuft bereits",
+      "reconfigure_successful": "Die Neukonfiguration war erfolgreich",
+      "wrong_device": "Unter dieser Adresse antwortet ein anderes Gerät."
+    }
+  },
+  "selector": {
+    "device": {
+      "options": {
+        "manual": "Adresse manuell eingeben"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "digital_input": {
+        "name": "{channel}"
+      },
+      "controller_connected": {
+        "name": "Controller-Verbindung"
+      },
+      "controller_connection_failure": {
+        "name": "Controller-Verbindungsfehler"
+      },
+      "display_connected": {
+        "name": "Display-Verbindung"
+      },
+      "button": {
+        "name": "Gerätetaste"
+      }
+    },
+    "number": {
+      "analog_output": {
+        "name": "{channel}"
+      }
+    },
+    "sensor": {
+      "analog_input": {
+        "name": "{channel}"
+      },
+      "sensor_value": {
+        "name": "{channel} Sensorwert"
+      },
+      "counter": {
+        "name": "{channel}"
+      },
+      "pulses": {
+        "name": "{channel} Impulse"
+      },
+      "switching_cycles": {
+        "name": "{channel} Schaltspiele"
+      },
+      "on_time": {
+        "name": "{channel} Einschaltdauer"
+      },
+      "actuator_value": {
+        "name": "{channel} Stellspannung"
+      },
+      "status": {
+        "name": "{channel} Status",
+        "state": {
+          "ok": "OK",
+          "failure": "Fehler",
+          "overridden": "Übersteuert",
+          "disabled": "Deaktiviert",
+          "unconfigured": "Nicht konfiguriert"
+        }
+      },
+      "error": {
+        "name": "{channel} Fehlercode",
+        "state": {
+          "ok": "OK",
+          "periphery": "Fehler der Peripherie",
+          "res_high": "Widerstand zu hoch",
+          "temp_high": "Temperatur zu hoch",
+          "in_volt_high": "Eingangsspannung zu hoch",
+          "in_curr_shunt_res_high": "Shunt-Widerstand zu hoch",
+          "out_volt_high": "Ausgangsspannung zu hoch",
+          "warn_lim_high": "Obere Warngrenze überschritten",
+          "temp_low": "Temperatur zu niedrig",
+          "neg_in_volt": "Negative Eingangsspannung",
+          "in_curr_small": "Eingangsstrom zu niedrig",
+          "neg_in_curr": "Negativer Eingangsstrom",
+          "neg_in_curr_sensor_not_conn": "Negativer Eingangsstrom oder Sensor nicht angeschlossen",
+          "out_volt_small": "Ausgangsspannung zu niedrig",
+          "warn_lim_low": "Untere Warngrenze unterschritten",
+          "sensor_not_conn": "Sensor nicht angeschlossen",
+          "low_level_exceeds_volt_limit": "Low-Pegel überschreitet die Spannungsgrenze",
+          "out_overload": "Überlast am Ausgang",
+          "virt_null": "Virtueller Wert ist leer",
+          "virt_alarm": "Virtueller Wert im Alarmzustand",
+          "virt_stale": "Virtueller Wert ist veraltet",
+          "virt_down": "Virtuelle Quelle nicht verfügbar",
+          "virt_fault": "Fehler der virtuellen Quelle",
+          "virt_disabled": "Virtuelle Quelle deaktiviert"
+        }
+      },
+      "points_in_failure": {
+        "name": "Datenpunkte mit Fehler"
+      },
+      "points_overridden": {
+        "name": "Übersteuerte Datenpunkte"
+      }
+    },
+    "switch": {
+      "digital_output": {
+        "name": "{channel}"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Keine Verbindung zum CatanIO-Gerät unter {host}: {error}"
+    },
+    "unexpected_device": {
+      "message": "Unter {host} antwortet ein anderes Gerät. Das Gerät wird wieder eingerichtet, sobald die Suche es findet."
+    },
+    "unsupported_model": {
+      "message": "Das Gerätemodell {model} wird nicht unterstützt."
+    },
+    "update_failed": {
+      "message": "Fehler bei der Kommunikation mit dem CatanIO-Gerät unter {host}: {error}"
+    },
+    "command_failed": {
+      "message": "Das CatanIO-Gerät hat den Befehl nicht angenommen: {error}"
+    }
+  }
+}

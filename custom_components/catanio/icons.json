@@ -1,0 +1,57 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "digital_input": {
+        "default": "mdi:electric-switch",
+        "state": {
+          "on": "mdi:electric-switch-closed"
+        }
+      },
+      "button": {
+        "default": "mdi:gesture-tap-button"
+      }
+    },
+    "number": {
+      "analog_output": {
+        "default": "mdi:knob"
+      }
+    },
+    "sensor": {
+      "sensor_value": {
+        "default": "mdi:gauge"
+      },
+      "counter": {
+        "default": "mdi:counter"
+      },
+      "pulses": {
+        "default": "mdi:pulse"
+      },
+      "switching_cycles": {
+        "default": "mdi:counter"
+      },
+      "status": {
+        "default": "mdi:list-status"
+      },
+      "error": {
+        "default": "mdi:alert-circle-outline",
+        "state": {
+          "ok": "mdi:check-circle-outline"
+        }
+      },
+      "points_in_failure": {
+        "default": "mdi:alert-outline"
+      },
+      "points_overridden": {
+        "default": "mdi:hand-back-right"
+      }
+    },
+    "switch": {
+      "digital_output": {
+        "default": "mdi:toggle-switch-variant-off",
+        "state": {
+          "on": "mdi:toggle-switch-variant"
+        }
+      }
+    }
+  }
+}
