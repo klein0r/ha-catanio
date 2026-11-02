@@ -7,7 +7,7 @@ aiocoap==0.4.17
 protobuf==7.36.0
 
 # Linting and typing
-mypy==2.4.0
+mypy==2.4.1
 ruff==0.17.3
 types-protobuf==7.35.1.20260906
 
